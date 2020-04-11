@@ -14,7 +14,7 @@
         {% for product in product_list%}
         <tr>
           <th scope="row">{{ product.id }}</th>
-          <th>{{ product.name }}</th>
+          <th> <a href="/product/{{ product.id }}"></a>{{ product.name }}</th>
           <th>{{ product.price|intcomma}} 원</th>
           <th>{{ product.registered_date|date:'Y-m-d H:i'}}</th>
         </tr>
@@ -22,6 +22,8 @@
       </tbody>
     </table>
   </div>
+</div>
+
 </div>
 
 {% endblock contents %}
